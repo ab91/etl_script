@@ -4,6 +4,14 @@
 
 This Extract, Transform, Load script takes a JSON file as input and outputs a JSON file. It is for use with an ETL software that dynamically builds JSON requests to other systems.
 
+## Demo
+
+<p align="center">
+  <img src="https://res.cloudinary.com/ab91/image/upload/v1591016740/Portfolio%20New/excerpt2.gif" alt="ETL Gif"/>
+</p>
+
+View an 8 minute demo on Vimeo [here](https://vimeo.com/425395861).
+
 **Here is how it works:**
 
 1. Provide a sample JSON request
@@ -57,6 +65,6 @@ $ ./generate_mappings.sh
 
 **Q:** Why doesn't my JSON delivery look perfectly identical to my example JSON request body?
 
-**A:** JSON "an [unordered](https://www.json.org) set of name/value pairs". After reviewing jq, catj, gron, and other tools that find all paths in a JSON object, none consistently preserved the location of each key-value pair unfortunately. 
+**A:** JSON is "an [unordered](https://www.json.org) set of name/value pairs". After reviewing jq, catj, gron, and other tools that find all paths in a JSON object, none consistently preserved the location of each key-value pair unfortunately. 
 
 gron gets the closest, however. And so when the select menu asks you if you want to preserve the location of your key-value pairs, you can execute gron in a way that attempts to preserve the location. The method is not very high tech and so if it tries and fails after a couple seconds, `^C` out of the script and decline location preservation next time.
